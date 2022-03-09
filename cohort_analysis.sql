@@ -1,4 +1,5 @@
--- Converting Unix timestamp into real time and finding the first purchase day by taking the minimum difference between install time and event time (adjusted to Turkey time zone UTC+3)
+-- Converting Unix timestamp into real time and finding the first purchase day by taking the minimum difference between install time and event time (adjusted to 
+--Turkey time zone UTC+3)
 
 CREATE TEMP TABLE first_day AS (
 	SELECT user_id, MIN(real_event_time::DATE-real_install_time::DATE) as first_purchase_day
